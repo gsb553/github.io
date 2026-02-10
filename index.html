@@ -2,88 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
-
+  <title>Osa – Computer Science Undergraduate</title>
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f6f8;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      color: #2563eb;
-      text-align: center;
-    }
-
-    h2 {
-      color: #333;
-      margin-top: 30px;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #555;
-    }
-
-    ul {
-      list-style-type: square;
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-
-    a.button:hover {
-      background-color: #1e40af;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 1.5rem; line-height: 1.6; }
+    header { border-bottom: 2px solid #333; margin-bottom: 1rem; }
+    h1 { margin-bottom: 0.2rem; }
+    .tagline { font-style: italic; color: #555; }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <h1>Welcome to My Website</h1>
-
-    <p>Hello! My name is Osa and this is my first website.</p>
-
-    <h2>About Me</h2>
-    <p>I am learning web development at the University of York.</p>
-
-    <h2>My Interests</h2>
-    <ul>
-      <li>Web Development</li>
-      <li>Computer Science</li>
-      <li>Technology</li>
-    </ul>
-
-    <img src="https://via.placeholder.com/600x300" alt="Placeholder image">
-
-    <p>
-      <a class="button" href="https://www.freecodecamp.org/">Visit my favourite website</a>
-    </p>
-  </div>
+  <header>
+    <h1>Osa</h1>
+    <p class="tagline">Computer Science undergraduate – interested in web development and data</p>
+  </header>
+ 
+  <main>
+    <h2>Welcome</h2>
+    <p>This is my professional portfolio website. Here you can find my projects, skills, and contact details.</p>
+  </main>
 </body>
 </html>
+ 
+ <main>
+  <!-- Hero section -->
+  <section id="hero">
+    <h2>Hello, I’m Your Name</h2>
+    <p><strong>Computer Science undergraduate</strong> at the University of York.</p>
+    <p><em>Interested in backend development and cloud computing.</em></p>
+    <p><strong>What I do:</strong> I enjoy building reliable, data-driven applications that solve real problems for users.</p>
+    <p><a href="#projects">View my projects</a> | <a href="YourCVLink.pdf">Download my CV</a></p>
+  </section>
+ 
+  <!-- About section -->
+  <section id="about">
+    <h2>About me</h2>
+    <p>I am a first-year Computer Science student learning the fundamentals of programming, web development, computer architecture, and databases.</p>
+    <p>I am currently looking for internship and placement opportunities where I can develop my skills in web development and data engineering.</p>
+    <p>Outside my studies, I enjoy playing football and basketball, which have helped me build strong teamwork and communication skills.</p>
+  </section>
+ 
+  <!-- Projects section -->
+  <section id="projects">
+    <h2>Featured projects</h2>
+ 
+    <article>
+      <h3>Project 1 – Title</h3>
+      <p><strong>Summary:</strong> One or two sentences explaining what the project does and who it is for.</p>
+      <p><strong>Tech stack:</strong> HTML, CSS, JavaScript</p>
+      <p><strong>My contribution:</strong> Explain what <em>you</em> did (for example: frontend, backend, database design).</p>
+      <p><strong>Challenges:</strong> Briefly describe a difficulty and how you solved it.</p>
+      <p><a href="https://github.com/yourusername/project1">Source code</a> | <a href="https://your-demo-link.com">Live demo</a></p>
+    </article>
+ 
+    <article>
+      <h3>Project 2 – Title</h3>
+      <p><strong>Summary:</strong> Another short description for a second project.</p>
+      <p><strong>Tech stack:</strong> Python, Flask, SQL</p>
+      <p><strong>My contribution:</strong> For example: designed database schema and implemented backend logic.</p>
+      <p><strong>Challenges:</strong> Mention something you learned.</p>
+      <p><a href="https://github.com/yourusername/project2">Source code</a></p>
+    </article>
+  </section>
+ 
+  <!-- Skills section -->
+  <section id="skills">
+    <h2>Skills and tools</h2>
+    <p><strong>Languages:</strong> Python, Java, HTML, CSS, JavaScript, SQL</p>
+    <p><strong>Frameworks and tools:</strong> Git, GitHub, VS Code</p>
+    <p><strong>Interests:</strong> Web development, data engineering, cloud computing</p>
+  </section>
+ 
+  <!-- Contact section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@york.ac.uk">your.email@york.ac.uk</a></p>
+    <p>Location: York, United Kingdom</p>
+    <p>Profiles: 
+      <a href="https://github.com/yourusername">GitHub</a> | 
+      <a href="https://www.linkedin.com/in/your-link/">LinkedIn</a>
+    </p>
+  </section>
+</main>
