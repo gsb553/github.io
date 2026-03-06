@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Me</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>About Me</h1>
+
+<p>
+I am currently learning core concepts in programming, databases, and web development as part of my degree.
+</p>
+
+<p>
+My goal is to continue improving my technical skills and prepare for internship and placement opportunities.
+</p>
+
+<p>
+Outside of academics, I enjoy playing football and basketball, which have strengthened my teamwork and communication abilities.
+</p>
+
+</body>
+</html>
