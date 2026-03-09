@@ -1,18 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Contact</title>
-</head>
-
-<body>
-
-<h1>Contact</h1>
-
-<p>Email: <a href="mailto:gsb5553@york.ac.uk">gsb5553@york.ac.uk</a></p>
-
-<p>Location: York, United Kingdom</p>
-
-<p>GitHub: <a href="https://github.com/gsb553">github.com/gsb553</a></p>
-
-</body>
-</html>
+<!-- Contact Form — paste into your HTML where you want the form -->
+<section id="contact">
+<h2>Get In Touch</h2>
+<form id="contact-form">
+<div>
+<label for="name">Osa</label>
+<input type="text" id="name" name="name" required
+placeholder="Osa Bangira" />
+</div>
+<div>
+<label for="email">gsb553@york.ac.uk</label>
+<input type="email" id="email" name="email" required
+placeholder="gsb553@york.ac.uk" />
+</div>
+<div>
+<label for="message">Message</label>
+<textarea id="message" name="message" required
+placeholder="Say hello..." rows="5"></textarea>
+</div>
+<button type="submit" id="submit-btn">Send Message</button>
+<p id="form-status"></p>
+</form>
+</section>
