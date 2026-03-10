@@ -1,28 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Osa – Computer Science Undergraduate</title>
-
 <style>
 
+/* ===== Site Theme (CSS Variables) ===== */
+:root{
+--bg:#f4f7fb;
+--text:#333;
+--header:#1e3a8a;
+--nav:#111827;
+--accent:#60a5fa;
+--card:#ffffff;
+}
+
+/* ===== Global Styles ===== */
 body{
 font-family: Arial, sans-serif;
 margin:0;
-background:#f4f7fb;
-color:#333;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
 }
 
+/* ===== Header ===== */
 header{
-background:#1e3a8a;
+background:var(--header);
 color:white;
-padding:1.5rem;
+padding:1.8rem;
 text-align:center;
 }
 
+header h1{
+margin:0;
+font-size:2rem;
+}
+
+header p{
+margin-top:0.5rem;
+font-size:0.95rem;
+}
+
+/* ===== Navigation ===== */
 nav{
-background:#111827;
-padding:0.8rem;
+background:var(--nav);
+padding:0.9rem;
 text-align:center;
 }
 
@@ -31,76 +49,42 @@ color:white;
 margin:0 15px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#60a5fa;
+color:var(--accent);
 }
 
+/* ===== Main Content ===== */
 main{
 max-width:900px;
 margin:auto;
 padding:2rem;
 }
 
+/* ===== Content Sections ===== */
 section{
-background:white;
+background:var(--card);
 padding:1.5rem;
 margin-bottom:1.5rem;
 border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
 h2{
-color:#1e3a8a;
+color:var(--header);
+margin-top:0;
 }
 
+/* ===== Footer ===== */
 footer{
 text-align:center;
 padding:1rem;
-background:#111827;
+background:var(--nav);
 color:white;
 margin-top:2rem;
+font-size:0.9rem;
 }
 
 </style>
-</head>
-
-<body>
-
-<header>
-<h1>Osa</h1>
-<p>Computer Science Undergraduate (studying in the year 2026) – interested in web development</p>
-</header>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="skills.html">Skills</a>
-<a href="diary.html">Production Diary</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<main>
-
-<section>
-<h2>Hello, I’m Osa</h2>
-
-<p>
-I am a Computer Science student currently studying through 2026, building a strong foundation in programming, software development, and computer systems.
-</p>
-
-<p>
-I am developing my skills in backend development, web technologies, and cloud computing.
-</p>
-
-</section>
-
-</main>
-
-<footer>
-<p>© 2026 Osa | Portfolio Website</p>
-</footer>
-
-</body>
-</html>
