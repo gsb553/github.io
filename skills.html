@@ -41,6 +41,7 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
+            z-index: 1001;
         }
 
         .back-home:hover {
@@ -83,4 +84,64 @@
         }
 
         .badge-container {
-            display
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+            cursor: default;
+        }
+
+        .badge:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Distinct colors for categories */
+        .lang { background: rgba(56, 189, 248, 0.15); color: var(--primary-accent); border: 1px solid var(--primary-accent); }
+        .tool { background: rgba(251, 191, 36, 0.15); color: var(--secondary-accent); border: 1px solid var(--secondary-accent); }
+        .area { background: rgba(244, 114, 182, 0.15); color: var(--tertiary-accent); border: 1px solid var(--tertiary-accent); }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+
+    <main class="skills-container">
+        <h1>Skills & Learning</h1>
+
+        <div class="skill-section">
+            <h3>Programming Languages</h3>
+            <div class="badge-container">
+                <span class="badge lang">Python</span>
+                <span class="badge lang">Java</span>
+                <span class="badge lang">HTML</span>
+                <span class="badge lang">CSS</span>
+                <span class="badge lang">JavaScript</span>
+                <span class="badge lang">SQL</span>
+            </div>
+        </div>
+
+        <div class="skill-section">
+            <h3>Tools</h3>
+            <div class="badge-container">
+                <span class="badge tool">GitHub</span>
+                <span class="badge tool">VS Code</span>
+            </div>
+        </div>
+
+        <div class="skill-section">
+            <h3>Areas of Interest</h3>
+            <div class="badge-container">
+                <span class="badge area">Web Development</span>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
