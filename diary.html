@@ -1,107 +1,69 @@
-<a href="index.html" class="back-home">← Back to Home</a>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Production Diary – Week 5</title>
-
     <style>
+        :root {
+            --primary-bg: #f8fafc;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-purple: #8b5cf6;
+            --text-dark: #1e293b;
+        }
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f4f4f4;
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        /* Back to Home Navigation */
+        .back-home {
+            display: inline-block;
+            margin-bottom: 25px;
+            text-decoration: none;
+            color: var(--accent-purple);
+            font-weight: 600;
+            padding: 8px 16px;
+            border: 2px solid var(--accent-purple);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: var(--accent-purple);
+            color: white;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .diary-wrapper {
+            max-width: 750px;
+            margin: 0 auto;
         }
 
         header {
-            border-bottom: 2px solid #333;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            color: #333;
-        }
+        h1 { margin: 0; font-size: 2rem; }
+        .date { opacity: 0.9; font-style: italic; margin-top: 10px; }
 
-        .date {
-            color: #666;
-            font-style: italic;
-        }
-
+        /* Themed Sections */
         section {
             background: white;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <h1>Production Diary – Week 5</h1>
-    <p class="date"><strong>Date:</strong> 10 February 2026</p>
-</header>
-
-<main>
-
-<section>
-    <p>
-        This week I continued developing my GitHub Pages portfolio website.
-        I focused on organising the main sections of my homepage, including
-        About, Skills, and Contact, and making sure the structure was clear
-        and easy to navigate.
-    </p>
-</section>
-
-<section>
-    <p>
-        I am most proud of successfully publishing my website and seeing it
-        live online. It was satisfying to understand how the different HTML
-        elements work together to form a complete webpage.
-    </p>
-</section>
-
-<section>
-    <p>
-        I found it challenging to make sure my HTML structure was correct,
-        especially remembering to close tags properly and keep the layout
-        organised. Small mistakes caused errors, which showed me how important
-        attention to detail is in web development.
-    </p>
-</section>
-
-<section>
-    <p>
-        Through this process, I improved my understanding of semantic HTML,
-        page structure, and basic CSS styling. I also learned more about how
-        GitHub Pages deploys a website from a repository.
-    </p>
-</section>
-
-<section>
-    <p>
-        Next week, I would like to improve the visual design of my site and
-        begin adding a project section so I can showcase practical programming work.
-    </p>
-</section>
-
-</main>
-
-<footer>
-    <p>Portfolio Development Diary</p>
-</footer>
-
-</body>
-</html>
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border-left:
