@@ -66,4 +66,70 @@
             padding: 25px;
             margin-bottom: 20px;
             border-radius: 15px;
-            border-left:
+            border-left: 6px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        section:hover { transform: scale(1.01); }
+
+        /* Color Coding the Entry Types */
+        .progress { border-left-color: var(--accent-blue); }
+        .win { border-left-color: var(--accent-green); }
+        .challenge { border-left-color: var(--accent-orange); }
+        .learning { border-left-color: var(--accent-purple); }
+        .next-steps { border-left-color: #ec4899; }
+
+        section h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-dark);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="diary-wrapper">
+    <a href="index.html" class="back-home">← Back to Home</a>
+
+    <header>
+        <h1>Production Diary – Week 5</h1>
+        <p class="date">📅 10 February 2026</p>
+    </header>
+
+    <main>
+        <section class="progress">
+            <h2>🔵 Current Progress</h2>
+            <p>
+                This week I continued developing my GitHub Pages portfolio website. 
+                I focused on organising the main sections of my homepage, including 
+                About, Skills, and Contact, ensuring the structure was clear and easy to navigate.
+            </p>
+        </section>
+
+        <section class="win">
+            <h2>🟢 Weekly Win</h2>
+            <p>
+                I am most proud of successfully publishing my website and seeing it 
+                live online. It was satisfying to understand how the different HTML 
+                elements work together to form a complete webpage.
+            </p>
+        </section>
+
+        <section class="challenge">
+            <h2>🟠 Challenges Faced</h2>
+            <p>
+                I found it challenging to make sure my HTML structure was correct, 
+                especially remembering to close tags properly. Small mistakes caused layout errors
