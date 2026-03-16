@@ -1,26 +1,108 @@
-<a href="index.html" class="back-home">← Back to Home</a>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About Me</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Osa</title>
+    <style>
+        :root {
+            /* Using a vibrant mesh gradient for the "Colorful" vibe */
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #2d3436;
+            --accent: #6c5ce7;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            padding: 20px;
+        }
+
+        .about-container {
+            background: var(--glass-bg);
+            max-width: 650px;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-top: 0;
+            background: var(--bg-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .back-home:hover {
+            background: white;
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        /* Subtle animation for the card */
+        .about-container {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>About Me</h1>
+    <a href="index.html" class="back-home">← Back to Home</a>
 
-<p>
-I am currently learning core concepts in programming, databases, and web development as part of my degree.
-</p>
+    <main class="about-container">
+        <h1>About Me</h1>
 
-<p>
-My goal is to continue improving my technical skills and prepare for internship and placement opportunities.
-</p>
+        <p>
+            I am currently learning core concepts in <strong>programming</strong>, <strong>databases</strong>, and <strong>web development</strong> as part of my degree.
+        </p>
 
-<p>
-Outside of academics, I enjoy playing football and basketball, which have strengthened my teamwork and communication abilities.
-</p>
+        <p>
+            My goal is to continue improving my technical skills and prepare for internship and placement opportunities.
+        </p>
+
+        <p>
+            Outside of academics, I enjoy playing <strong>football and basketball</strong>, which have strengthened my teamwork and communication abilities.
+        </p>
+    </main>
 
 </body>
 </html>
