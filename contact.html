@@ -5,96 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Portfolio</title>
     <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --accent-color: #ff6b6b;
-        }
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-light-blue: #eef2ff; /* The light blue tint in your screenshot */
+}
 
-        body {
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 20px;
-        }
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 
-        #contact {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+#contact {
+    max-width: 550px;
+    margin: 60px auto;
+    padding: 45px;
+    background: #ffffff;
+    border-radius: 24px; /* More rounded corners */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
 
-        #contact h2 {
-            text-align: center;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
+#contact h2 {
+    text-align: center;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8rem;
+    margin-bottom: 35px;
+    font-weight: 800;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.form-group {
+    margin-bottom: 25px;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #444;
-        }
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #333;
+    font-size: 0.95rem;
+}
 
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #eee;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-        }
+/* This targets the input and textarea to look like your screenshot */
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: var(--bg-light-blue); /* Light blue background */
+    border: 2px solid transparent; /* No visible border initially */
+    border-radius: 12px; /* Smooth rounded pill shape */
+    font-size: 1rem;
+    color: #444;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
 
-        .form-group input:focus, 
-        .form-group textarea:focus {
-            border-color: #764ba2;
-            outline: none;
-            box-shadow: 0 0 10px rgba(118, 75, 162, 0.2);
-        }
+/* Focus effect when you click in */
+.form-group input:focus, 
+.form-group textarea:focus {
+    background-color: #ffffff;
+    border-color: #764ba2;
+    outline: none;
+    box-shadow: 0 0 15px rgba(118, 75, 162, 0.15);
+}
 
-        #submit-btn {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            background: var(--primary-gradient);
-            color: white;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
+/* Fix for the textarea size in your screenshot */
+textarea#message {
+    min-height: 120px;
+    resize: vertical;
+}
 
-        #submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
+#submit-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary-gradient);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3);
+    transition: transform 0.2s ease;
+}
 
-        #form-status {
-            text-align: center;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+#submit-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
 
-        .back-home {
-            display: inline-block;
-            margin: 20px;
-            text-decoration: none;
-            color: #764ba2;
-            font-weight: bold;
-        }
-    </style>
+#form-status {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
+</style>
 </head>
 <body>
 
