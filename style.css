@@ -7,6 +7,10 @@
     --muted: #b8c1d1;
     --blue: #0a84ff;
     --orange: #ff5a00;
+    --pink: #ff7bc3;
+    --yellow: #ffd54a;
+    --green: #22c55e;
+    --purple: #a78bfa;
     --border: rgba(255,255,255,0.08);
     --shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
@@ -22,9 +26,10 @@ html {
 body {
     margin: 0;
     font-family: Inter, Arial, sans-serif;
-    background: radial-gradient(circle at top right, rgba(10,132,255,0.08), transparent 20%),
-                radial-gradient(circle at left center, rgba(255,90,0,0.08), transparent 20%),
-                linear-gradient(180deg, #03060b 0%, #07111f 100%);
+    background:
+        radial-gradient(circle at top right, rgba(10,132,255,0.08), transparent 20%),
+        radial-gradient(circle at left center, rgba(255,90,0,0.08), transparent 20%),
+        linear-gradient(180deg, #03060b 0%, #07111f 100%);
     color: var(--text);
     line-height: 1.6;
 }
@@ -127,7 +132,7 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.06);
 }
 
-/* hero section */
+/* Home hero */
 .hero {
     min-height: 70vh;
     display: grid;
@@ -200,7 +205,6 @@ footer {
     top: 63%;
 }
 
-/* buttons */
 .cta-btn {
     display: inline-block;
     margin-top: 1.5rem;
@@ -218,7 +222,13 @@ footer {
     opacity: 0.95;
 }
 
-/* skills */
+/* About */
+.about-container section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills */
 .skill-section {
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.06);
@@ -250,23 +260,23 @@ footer {
 }
 
 .badge.area {
-    color: #ff7bc3;
-    border-color: #ff7bc3;
+    color: var(--pink);
+    border-color: var(--pink);
 }
 
 .badge.tool {
-    color: #ffd54a;
-    border-color: #ffd54a;
+    color: var(--yellow);
+    border-color: var(--yellow);
 }
 
-/* diary */
+/* Diary */
 .progress { border-left: 5px solid var(--blue); }
-.win { border-left: 5px solid #22c55e; }
+.win { border-left: 5px solid var(--green); }
 .challenge { border-left: 5px solid var(--orange); }
-.learning { border-left: 5px solid #a78bfa; }
-.next-steps { border-left: 5px solid #f472b6; }
+.learning { border-left: 5px solid var(--purple); }
+.next-steps { border-left: 5px solid var(--pink); }
 
-/* contact */
+/* Contact */
 #contact {
     max-width: 650px;
     margin: 50px auto;
@@ -339,7 +349,7 @@ textarea#message {
     font-weight: 700;
 }
 
-/* responsive */
+/* Responsive */
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
@@ -348,6 +358,11 @@ textarea#message {
 
     .hero-text h2 {
         font-size: 3rem;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
