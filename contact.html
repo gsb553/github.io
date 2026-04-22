@@ -3,107 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Portfolio</title>
-    <style>
-:root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --bg-light-blue: #eef2ff; /* The light blue tint in your screenshot */
-}
-
-body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
-#contact {
-    max-width: 550px;
-    margin: 60px auto;
-    padding: 45px;
-    background: #ffffff;
-    border-radius: 24px; /* More rounded corners */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-#contact h2 {
-    text-align: center;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2.8rem;
-    margin-bottom: 35px;
-    font-weight: 800;
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 700;
-    color: #333;
-    font-size: 0.95rem;
-}
-
-/* This targets the input and textarea to look like your screenshot */
-.form-group input, 
-.form-group textarea {
-    width: 100%;
-    padding: 14px 20px;
-    background-color: var(--bg-light-blue); /* Light blue background */
-    border: 2px solid transparent; /* No visible border initially */
-    border-radius: 12px; /* Smooth rounded pill shape */
-    font-size: 1rem;
-    color: #444;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-/* Focus effect when you click in */
-.form-group input:focus, 
-.form-group textarea:focus {
-    background-color: #ffffff;
-    border-color: #764ba2;
-    outline: none;
-    box-shadow: 0 0 15px rgba(118, 75, 162, 0.15);
-}
-
-/* Fix for the textarea size in your screenshot */
-textarea#message {
-    min-height: 120px;
-    resize: vertical;
-}
-
-#submit-btn {
-    width: 100%;
-    padding: 16px;
-    border: none;
-    border-radius: 12px;
-    background: var(--primary-gradient);
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3);
-    transition: transform 0.2s ease;
-}
-
-#submit-btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
-#form-status {
-    text-align: center;
-    margin-top: 20px;
-    font-weight: 600;
-}
-</style>
+    <title>Contact | Osa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a href="index.html" class="back-home">← Back to Home</a>
+<header>
+    <h1>Contact</h1>
+    <p>Get in touch with me through the form below</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="diary.html">Diary</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
 <section id="contact">
     <h2>Get In Touch</h2>
@@ -119,7 +35,7 @@ textarea#message {
             <input type="email" id="email" required>
         </div>
 
-        <div class="group">
+        <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" rows="5" required></textarea>
         </div>
@@ -129,15 +45,16 @@ textarea#message {
     </form>
 </section>
 
+<footer>
+    <p>© 2026 Osa | Portfolio Website</p>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 <script>
 (function() {
-    // Database credentials
     const supabaseUrl = "https://smiltpqmvtuvsfyqxaht.supabase.co";
     const supabaseKey = "sb_publishable_Yrk2D8-Jy_JGIv6M_YmWtg_PBXvCmQ3";
-
-    // Initialize client with a unique name to avoid conflicts
     const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
     const form = document.getElementById("contact-form");
@@ -146,35 +63,29 @@ textarea#message {
 
     if (form) {
         form.addEventListener("submit", async (event) => {
-            // STOP THE PAGE REFRESH (The "?" in the URL)
             event.preventDefault();
 
-            // Get form values
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
             const message = document.getElementById("message").value;
 
-            // UI Feedback
             btn.disabled = true;
-            status.textContent = "⌛ Sending message...";
+            status.textContent = "Sending message...";
             status.style.color = "#667eea";
 
             try {
-                // Send to Supabase table named 'contacts'
                 const { error } = await supabaseClient
                     .from("contacts")
                     .insert([{ name, email, message }]);
 
                 if (error) throw error;
 
-                // Success
-                status.textContent = "✅ Message sent successfully!";
+                status.textContent = "Thank you, your message has been sent.";
                 status.style.color = "green";
                 form.reset();
 
             } catch (err) {
-                // Error handling
-                status.textContent = "❌ Error: " + err.message;
+                status.textContent = "Error: " + err.message;
                 status.style.color = "red";
                 console.error("Supabase Error:", err);
             } finally {
