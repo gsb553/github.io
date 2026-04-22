@@ -3,133 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Production Diary – Week 5</title>
-    <style>
-        :root {
-            --primary-bg: #f8fafc;
-            --accent-blue: #3b82f6;
-            --accent-green: #10b981;
-            --accent-orange: #f59e0b;
-            --accent-purple: #8b5cf6;
-            --text-dark: #1e293b;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            line-height: 1.7;
-            background-color: var(--primary-bg);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 40px 20px;
-        }
-
-        /* Back to Home Navigation */
-        .back-home {
-            display: inline-block;
-            margin-bottom: 25px;
-            text-decoration: none;
-            color: var(--accent-purple);
-            font-weight: 600;
-            padding: 8px 16px;
-            border: 2px solid var(--accent-purple);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .back-home:hover {
-            background: var(--accent-purple);
-            color: white;
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
-        }
-
-        .diary-wrapper {
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        h1 { margin: 0; font-size: 2rem; }
-        .date { opacity: 0.9; font-style: italic; margin-top: 10px; }
-
-        /* Themed Sections */
-        section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            border-left: 6px solid #ccc;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-        }
-
-        section:hover { transform: scale(1.01); }
-
-        /* Color Coding the Entry Types */
-        .progress { border-left-color: var(--accent-blue); }
-        .win { border-left-color: var(--accent-green); }
-        .challenge { border-left-color: var(--accent-orange); }
-        .learning { border-left-color: var(--accent-purple); }
-        .next-steps { border-left-color: #ec4899; }
-
-        section h2 {
-            font-size: 1.1rem;
-            margin-top: 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-dark);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #94a3b8;
-            font-weight: 500;
-        }
-    </style>
+    <title>Production Diary | Osa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="diary-wrapper">
-    <a href="index.html" class="back-home">← Back to Home</a>
+<header>
+    <h1>Production Diary</h1>
+    <p>My weekly progress, challenges, and learning</p>
+</header>
 
-    <header>
-        <h1>Production Diary – Week 5</h1>
-        <p class="date">📅 10 February 2026</p>
-    </header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="diary.html">Diary</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-    <main>
-        <section class="progress">
-            <h2>🔵 Current Progress</h2>
-            <p>
-                This week I continued developing my GitHub Pages portfolio website. 
-                I focused on organising the main sections of my homepage, including 
-                About, Skills, and Contact, ensuring the structure was clear and easy to navigate.
-            </p>
-        </section>
+<main class="diary-wrapper">
+    <section class="progress">
+        <h2>Current Progress</h2>
+        <p>
+            This week I continued developing my GitHub Pages portfolio website.
+            I focused on organising the main sections of my homepage, including
+            About, Skills, and Contact, ensuring the structure was clear and easy to navigate.
+        </p>
+    </section>
 
-        <section class="win">
-            <h2>🟢 Weekly Win</h2>
-            <p>
-                I am most proud of successfully publishing my website and seeing it 
-                live online. It was satisfying to understand how the different HTML 
-                elements work together to form a complete webpage.
-            </p>
-        </section>
+    <section class="win">
+        <h2>Weekly Win</h2>
+        <p>
+            I am most proud of successfully publishing my website and seeing it
+            live online. It was satisfying to understand how the different HTML
+            elements work together to form a complete webpage.
+        </p>
+    </section>
 
-        <section class="challenge">
-            <h2>🟠 Challenges Faced</h2>
-            <p>
-                I found it challenging to make sure my HTML structure was correct, 
-                especially remembering to close tags properly. Small mistakes caused layout errors
+    <section class="challenge">
+        <h2>Challenges Faced</h2>
+        <p>
+            I found it challenging to make sure my HTML structure was correct,
+            especially remembering to close tags properly. Small mistakes caused
+            layout errors, but fixing them helped me better understand how page
+            structure affects the final result.
+        </p>
+    </section>
+
+    <section class="learning">
+        <h2>What I Learned</h2>
+        <p>
+            This week I learned more about how to link pages together, how CSS
+            controls presentation, and how consistency across pages improves
+            usability and professionalism.
+        </p>
+    </section>
+
+    <section class="next-steps">
+        <h2>Next Steps</h2>
+        <p>
+            Next, I want to continue improving the design of my site, make the
+            contact form work fully with Supabase, and refine the layout so it
+            looks good on both desktop and mobile devices.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Osa | Portfolio Website</p>
+</footer>
+
+</body>
+</html>
