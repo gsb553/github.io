@@ -4,110 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Osa</title>
-    <style>
-        :root {
-            /* Using a vibrant mesh gradient for the "Colorful" vibe */
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --glass-bg: rgba(255, 255, 255, 0.95);
-            --text-main: #2d3436;
-            --accent: #6c5ce7;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: var(--bg-gradient);
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-main);
-            padding: 20px;
-        }
-
-        .about-container {
-            background: var(--glass-bg);
-            max-width: 650px;
-            padding: 50px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            margin-top: 0;
-            background: var(--bg-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 25px;
-        }
-
-        p {
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #4a4a4a;
-            margin-bottom: 20px;
-        }
-
-        .back-home {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 50px;
-            backdrop-filter: blur(5px);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .back-home:hover {
-            background: white;
-            color: var(--accent);
-            transform: translateX(-5px);
-        }
-
-        /* Subtle animation for the card */
-        .about-container {
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <a href="index.html" class="back-home">← Back to Home</a>
-
-    <main class="about-container">
+<header>
     <h1>About Me</h1>
+    <p>Learn more about my background, interests, and goals</p>
+</header>
 
-    <p>
-        Hello, I'm Osa, a Computer Science student with a Nigerian-British background. 
-        My experiences from both cultures have helped shape my perspective, giving me a strong sense of adaptability, creativity, and motivation to grow.
-    </p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="diary.html">Diary</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-    <p>
-        I am currently developing my skills in <strong>programming</strong>, <strong>web development</strong>, and <strong>databases</strong> as part of my degree. 
-        I enjoy building websites, learning new technologies, and improving my problem-solving abilities through practical work.
-    </p>
+<main class="about-container">
+    <section>
+        <h2>Who I Am</h2>
 
-    <p>
-        I am particularly interested in pursuing a career in technology and I am actively looking for <strong>internship opportunities</strong> to expand my knowledge, gain real-world experience, and continue developing as a future software developer.
-    </p>
+        <p>
+            Hello, I'm Osa, a Computer Science student with a Nigerian-British background.
+            My experiences from both cultures have helped shape my perspective, giving me
+            a strong sense of adaptability, creativity, and motivation to grow.
+        </p>
 
-    <p>
-        Outside of academics, I enjoy playing <strong>football and basketball</strong>, which have helped me develop strong teamwork, communication, and discipline.
-    </p>
+        <p>
+            I am currently developing my skills in <strong>programming</strong>,
+            <strong>web development</strong>, and <strong>databases</strong> as part of my degree.
+            I enjoy building websites, learning new technologies, and improving my
+            problem-solving abilities through practical work.
+        </p>
+
+        <p>
+            I am particularly interested in pursuing a career in technology and I am actively
+            looking for <strong>internship opportunities</strong> to expand my knowledge,
+            gain real-world experience, and continue developing as a future software developer.
+        </p>
+
+        <p>
+            Outside of academics, I enjoy playing <strong>football and basketball</strong>,
+            which have helped me develop strong teamwork, communication, and discipline.
+        </p>
+    </section>
 </main>
+
+<footer>
+    <p>© 2026 Osa | Portfolio Website</p>
+</footer>
+
 </body>
 </html>
