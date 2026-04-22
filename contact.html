@@ -21,78 +21,74 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<section id="contact">
-    <h2>Get In Touch</h2>
+<main>
+    <section id="contact">
+        <h2>Get In Touch</h2>
 
-    <form id="contact-form">
-        <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" required>
-        </div>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+            </div>
 
-        <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" required>
-        </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" required>
+            </div>
 
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" required></textarea>
-        </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" required></textarea>
+            </div>
 
-        <button type="submit" id="submit-btn">Send Message</button>
-        <p id="form-status"></p>
-    </form>
-</section>
+            <button type="submit" id="submit-btn">Send Message</button>
+            <p id="form-status"></p>
+        </form>
+    </section>
+</main>
 
 <footer>
     <p>© 2026 Osa | Portfolio Website</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-
 <script>
 (function() {
     const supabaseUrl = "https://smiltpqmvtuvsfyqxaht.supabase.co";
-    const supabaseKey = "sb_publishable_Yrk2D8-Jy_JGIv6M_YmWtg_PBXvCmQ3";
+    const supabaseKey = "YOUR_PUBLIC_ANON_KEY_HERE";
     const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
     const btn = document.getElementById("submit-btn");
 
-    if (form) {
-        form.addEventListener("submit", async (event) => {
-            event.preventDefault();
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
 
-            btn.disabled = true;
-            status.textContent = "Sending message...";
-            status.style.color = "#667eea";
+        btn.disabled = true;
+        status.textContent = "Sending message...";
 
-            try {
-                const { error } = await supabaseClient
-                    .from("contacts")
-                    .insert([{ name, email, message }]);
+        try {
+            const { error } = await supabaseClient
+                .from("contacts")
+                .insert([{ name, email, message }]);
 
-                if (error) throw error;
+            if (error) throw error;
 
-                status.textContent = "Thank you, your message has been sent.";
-                status.style.color = "green";
-                form.reset();
-
-            } catch (err) {
-                status.textContent = "Error: " + err.message;
-                status.style.color = "red";
-                console.error("Supabase Error:", err);
-            } finally {
-                btn.disabled = false;
-            }
-        });
-    }
+            status.textContent = "Thank you, your message has been sent.";
+            status.style.color = "#22c55e";
+            form.reset();
+        } catch (err) {
+            status.textContent = "Error: " + err.message;
+            status.style.color = "#ef4444";
+        } finally {
+            btn.disabled = false;
+        }
+    });
 })();
 </script>
 
